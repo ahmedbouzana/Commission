@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Commision.UserControlCreate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Commision"
+             mc:Ignorable="d" 
+             >
+    <Grid Background="Gray">
+
+        <DockPanel LastChildFill="True">
+            <Grid DockPanel.Dock="Top" Margin="0,0,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Column="0" Text="{Binding NomEntrepriseAdd}" materialDesign:HintAssist.Hint="Nom de l'entreprise" Foreground="#FF383737" Margin="5" />
+                <TextBox Grid.Column="1" Text="{Binding AdresseAdd}" materialDesign:HintAssist.Hint="Adresse" Foreground="#FF383737" Margin="5" />
+                <TextBox Grid.Column="2" Text="{Binding TelephoneAdd}" materialDesign:HintAssist.Hint="Téléphone" Foreground="#FF383737" Margin="5" />
+                <TextBox Grid.Column="3" Text="{Binding FaxAdd}" materialDesign:HintAssist.Hint="Fax" Foreground="#FF383737" Margin="5" />
+                <TextBox Grid.Column="4" Text="{Binding EmailAdd}" materialDesign:HintAssist.Hint="Email" Foreground="#FF383737" Margin="5" />
+                <Button Grid.Column="5" x:Uid="0" Click="Button_Click" Content="Ajouter" Margin="5" />
+
+            </Grid>
+
+            <DataGrid ItemsSource="{Binding Notation}" />
+        </DockPanel>
+            
+    </Grid>
+</UserControl>

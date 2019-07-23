@@ -13,16 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NavigationDrawerPopUpMenu2
+namespace Commision
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interação lógica para UserControlCreate.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserControlCreate : UserControl
     {
-        public MainWindow()
+        public UserControlCreate()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

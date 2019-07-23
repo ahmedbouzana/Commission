@@ -6,10 +6,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace NavigationDrawerPopUpMenu2
+namespace Commision
 {
     /// <summary>
-    /// Interaction logic for App.xaml
+    /// Interação lógica para App.xaml
     /// </summary>
     public partial class App : Application
     {

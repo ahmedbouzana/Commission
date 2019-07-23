@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Commision.UserControlHome"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Commision"
+             mc:Ignorable="d" 
+             Background="Aquamarine">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Column="0" Header="Liste de dossier administratif" Margin="16">
+                <DockPanel LastChildFill="True">
+                    <Grid DockPanel.Dock="Top" Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Text="{Binding NomAdministratifAdd}" materialDesign:HintAssist.Hint="Nom administratif" Foreground="#FF383737" Margin="5" />
+                        <TextBox Grid.Column="1" Text="{Binding ValeurAdministratifAdd}" materialDesign:HintAssist.Hint="Valeur" Foreground="#FF383737" Margin="5" />
+                        <Button Grid.Column="2" x:Uid="0" Click="Button_Click" Content="Ajouter" Margin="5" />
+                    </Grid>
+                    <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding DossierAdministratif}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nom administratif" Binding="{Binding NomAdministratif}"/>
+                            <DataGridTextColumn Header="Valeur" Binding="{Binding ValeurAdministratif}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </GroupBox>
+
+            <GroupBox Grid.Column="1" Header="Liste de dossier technique" Margin="16">
+                <DockPanel LastChildFill="True">
+                    <Grid DockPanel.Dock="Top" Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Text="{Binding NomAdministratifAdd}" materialDesign:HintAssist.Hint="Nom technique" Foreground="#FF383737" Margin="5" />
+                        <TextBox Grid.Column="1" Text="{Binding ValeurTechniqueAdd}" materialDesign:HintAssist.Hint="Valeur" Foreground="#FF383737" Margin="5" />
+                        <Button Grid.Column="2" x:Uid="1" Click="Button_Click" Content="Ajouter" Margin="5" />
+                    </Grid>
+                    <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding DossierTechnique}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nom technique" Binding="{Binding NomTechnique}"/>
+                            <DataGridTextColumn Header="Valeur" Binding="{Binding ValeurTechnique}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </GroupBox>
+
+        </Grid>
+
+    </Grid>
+</UserControl>
